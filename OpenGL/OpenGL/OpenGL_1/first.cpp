@@ -73,15 +73,21 @@ int DrawGLScene(GLvoid)								// 从这里开始进行所有的绘制
 glTranslatef(-1.5f,0.0f,-6.0f);						// 左移 1.5 单位，并移入屏幕 6.0
 glBegin(GL_TRIANGLES);							// 绘制三角形
 
+	glColor3f(1.0f,0.0f,0.0f);				// 设置当前色为红色
+
 		glVertex3f( 0.0f, 1.0f, 0.0f);					// 上顶点
 
+		glColor3f(0.0f,1.0f,0.0f);				// 设置当前色为绿色
 		glVertex3f(-1.0f,-1.0f, 0.0f);					// 左下
 
+		glColor3f(0.0f,0.0f,1.0f);				// 设置当前色为蓝色
 		glVertex3f( 1.0f,-1.0f, 0.0f);					// 右下
 
 	glEnd();								// 三角形绘制结束
 
 glTranslatef(3.0f,0.0f,0.0f);						// 右移3单位
+
+	glColor3f(0.5f,0.5f,1.0f);					// 一次性将当前色设置为蓝色
 	glBegin(GL_QUADS);							//  绘制正方形
 
 		glVertex3f(-1.0f, 1.0f, 0.0f);					// 左上
